@@ -32,6 +32,13 @@ namespace CapaDatos
                              select resp;
             return respuestas.ToList();
         }
-
+        
+        public Respuesta devolverRespuestaPorDescripcion(String descripcion)
+        {
+            var respuesta = from resp in contexto.Respuestas
+                            where resp.DESCRIPCION == descripcion
+                            select resp;
+            return respuesta.ToList().ElementAt(0);
+        }
     }
 }

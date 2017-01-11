@@ -21,5 +21,10 @@ namespace CapaNegocio
         {
             return _datos.devolverRespuestas(idPregunta);
         }
+
+        public Respuesta devolverRespuestaPorDescripcion(String descripcion)
+        {
+            return _datos.devolverRespuestaPorDescripcion(descripcion);
+        }
     }
 }

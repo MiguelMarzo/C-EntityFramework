@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnExplicacion = new System.Windows.Forms.Label();
+            this.lblExplicacion = new System.Windows.Forms.Label();
             this.btn12 = new System.Windows.Forms.Button();
             this.btn11 = new System.Windows.Forms.Button();
             this.btn10 = new System.Windows.Forms.Button();
@@ -48,15 +48,15 @@
             this.btnFin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnExplicacion
+            // lblExplicacion
             // 
-            this.btnExplicacion.AutoSize = true;
-            this.btnExplicacion.Location = new System.Drawing.Point(259, 580);
-            this.btnExplicacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.btnExplicacion.Name = "btnExplicacion";
-            this.btnExplicacion.Size = new System.Drawing.Size(77, 17);
-            this.btnExplicacion.TabIndex = 35;
-            this.btnExplicacion.Text = "explicacion";
+            this.lblExplicacion.AutoSize = true;
+            this.lblExplicacion.Location = new System.Drawing.Point(259, 580);
+            this.lblExplicacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblExplicacion.Name = "lblExplicacion";
+            this.lblExplicacion.Size = new System.Drawing.Size(77, 17);
+            this.lblExplicacion.TabIndex = 35;
+            this.lblExplicacion.Text = "explicacion";
             // 
             // btn12
             // 
@@ -221,7 +221,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1535, 699);
-            this.Controls.Add(this.btnExplicacion);
+            this.Controls.Add(this.lblExplicacion);
             this.Controls.Add(this.btn12);
             this.Controls.Add(this.btn11);
             this.Controls.Add(this.btn10);
@@ -249,7 +249,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label btnExplicacion;
+        private System.Windows.Forms.Label lblExplicacion;
         private System.Windows.Forms.Button btn12;
         private System.Windows.Forms.Button btn11;
         private System.Windows.Forms.Button btn10;
