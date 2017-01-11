@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SaberNoSaberModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Preguntas">
+          <Key>
+            <PropertyRef Name="IDPREGUNTA" />
+          </Key>
+          <Property Name="IDPREGUNTA" Type="int" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Respuestas">
+          <Key>
+            <PropertyRef Name="IDPREGUNTA" />
+            <PropertyRef Name="IDRESPUESTA" />
+          </Key>
+          <Property Name="IDPREGUNTA" Type="int" Nullable="false" />
+          <Property Name="IDRESPUESTA" Type="int" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="EXPLICACION" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <Association Name="FK_Respuestas_Preguntas">
+          <End Role="Preguntas" Type="Self.Preguntas" Multiplicity="1" />
+          <End Role="Respuestas" Type="Self.Respuestas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Preguntas">
+              <PropertyRef Name="IDPREGUNTA" />
+            </Principal>
+            <Dependent Role="Respuestas">
+              <PropertyRef Name="IDPREGUNTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SaberNoSaberModelStoreContainer">
+          <EntitySet Name="Preguntas" EntityType="Self.Preguntas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Respuestas" EntityType="Self.Respuestas" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Respuestas_Preguntas" Association="Self.FK_Respuestas_Preguntas">
+            <End Role="Preguntas" EntitySet="Preguntas" />
+            <End Role="Respuestas" EntitySet="Respuestas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SaberNoSaberModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Pregunta">
+          <Key>
+            <PropertyRef Name="IDPREGUNTA" />
+          </Key>
+          <Property Name="IDPREGUNTA" Type="Int32" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Respuestas" Relationship="Self.FK_Respuestas_Preguntas" FromRole="Preguntas" ToRole="Respuestas" />
+        </EntityType>
+        <EntityType Name="Respuesta">
+          <Key>
+            <PropertyRef Name="IDPREGUNTA" />
+            <PropertyRef Name="IDRESPUESTA" />
+          </Key>
+          <Property Name="IDPREGUNTA" Type="Int32" Nullable="false" />
+          <Property Name="IDRESPUESTA" Type="Int32" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EXPLICACION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Pregunta" Relationship="Self.FK_Respuestas_Preguntas" FromRole="Respuestas" ToRole="Preguntas" />
+        </EntityType>
+        <Association Name="FK_Respuestas_Preguntas">
+          <End Role="Preguntas" Type="Self.Pregunta" Multiplicity="1" />
+          <End Role="Respuestas" Type="Self.Respuesta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Preguntas">
+              <PropertyRef Name="IDPREGUNTA" />
+            </Principal>
+            <Dependent Role="Respuestas">
+              <PropertyRef Name="IDPREGUNTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SaberNoSaberEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Preguntas" EntityType="Self.Pregunta" />
+          <EntitySet Name="Respuestas" EntityType="Self.Respuesta" />
+          <AssociationSet Name="FK_Respuestas_Preguntas" Association="Self.FK_Respuestas_Preguntas">
+            <End Role="Preguntas" EntitySet="Preguntas" />
+            <End Role="Respuestas" EntitySet="Respuestas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SaberNoSaberModelStoreContainer" CdmEntityContainer="SaberNoSaberEntities">
+          <EntitySetMapping Name="Preguntas">
+            <EntityTypeMapping TypeName="SaberNoSaberModel.Pregunta">
+              <MappingFragment StoreEntitySet="Preguntas">
+                <ScalarProperty Name="IDPREGUNTA" ColumnName="IDPREGUNTA" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Respuestas">
+            <EntityTypeMapping TypeName="SaberNoSaberModel.Respuesta">
+              <MappingFragment StoreEntitySet="Respuestas">
+                <ScalarProperty Name="IDPREGUNTA" ColumnName="IDPREGUNTA" />
+                <ScalarProperty Name="IDRESPUESTA" ColumnName="IDRESPUESTA" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="EXPLICACION" ColumnName="EXPLICACION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
