@@ -20,6 +20,10 @@ namespace CapaPresentacion
         List<Respuesta> respuestasInsertadas = new List<Respuesta>();
         Random rnd = new Random();
         private List<int> usadas;
+        int puntos;
+        int contAcertadas;
+        int contErrores;
+
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +31,10 @@ namespace CapaPresentacion
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            contAcertadas = 0;
+            puntos = 0;
+            contErrores = 0;
+            lblPuntos.Text = puntos.ToString();
             //Cargar 1
             int num = rnd.Next(1, 4);
             preguntaActual = _negocio.devolverPregunta(num);
@@ -74,11 +82,28 @@ namespace CapaPresentacion
             {
                 btn.BackColor = Color.Green;
                 lblExplicacion.Text = resp.EXPLICACION;
+                btn.Enabled = false;
+                contAcertadas++;
+                puntos += 5 * contAcertadas;
+                lblPuntos.Text = puntos.ToString();
+                if ( contAcertadas == 8 )
+                {
+                    MessageBox.Show("Ya has acertado todas las respuestas");
+                }
+
             }
             else
             {
-            btn.BackColor = Color.Red;
-            lblExplicacion.Text = resp.EXPLICACION;
+                btn.Enabled = false;
+                btn.BackColor = Color.Red;
+                lblExplicacion.Text = resp.EXPLICACION;
+                puntos = puntos / 2;
+                lblPuntos.Text = puntos.ToString();
+                contErrores++;
+                if (contErrores == 4)
+                {
+                    MessageBox.Show("Ya has fallado todas las posibles respuestas erroneas");
+                }
             }
         }
     }
