@@ -117,7 +117,12 @@ namespace CapaPresentacion
         {
             preguntas.Remove(preguntaActual);
             maxPregunta--;
-            int num = rnd.Next(1, maxPregunta);
+            if(preguntas.Count == 0)
+            {
+                MessageBox.Show("NO HAY MAS PREGUNTAS");
+                return;
+            }
+            int num = rnd.Next(0, maxPregunta);
             preguntaActual = preguntas[num];
             foreach (Control X in this.Controls)
             {
