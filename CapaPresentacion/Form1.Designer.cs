@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.lblExplicacion = new System.Windows.Forms.Label();
-            this.btn12 = new System.Windows.Forms.Button();
-            this.btn11 = new System.Windows.Forms.Button();
-            this.btn10 = new System.Windows.Forms.Button();
-            this.btn9 = new System.Windows.Forms.Button();
-            this.btn8 = new System.Windows.Forms.Button();
-            this.btn7 = new System.Windows.Forms.Button();
-            this.btn6 = new System.Windows.Forms.Button();
-            this.btn5 = new System.Windows.Forms.Button();
-            this.btn4 = new System.Windows.Forms.Button();
-            this.btn3 = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
-            this.btn1 = new System.Windows.Forms.Button();
+            this.btnResp12 = new System.Windows.Forms.Button();
+            this.btnResp11 = new System.Windows.Forms.Button();
+            this.btnResp10 = new System.Windows.Forms.Button();
+            this.btnResp9 = new System.Windows.Forms.Button();
+            this.btnResp8 = new System.Windows.Forms.Button();
+            this.btnResp7 = new System.Windows.Forms.Button();
+            this.btnResp6 = new System.Windows.Forms.Button();
+            this.btnResp5 = new System.Windows.Forms.Button();
+            this.btnResp4 = new System.Windows.Forms.Button();
+            this.btnResp3 = new System.Windows.Forms.Button();
+            this.btnResp2 = new System.Windows.Forms.Button();
+            this.btnResp1 = new System.Windows.Forms.Button();
             this.btnPasar = new System.Windows.Forms.Button();
             this.lblPregunta = new System.Windows.Forms.Label();
             this.lblPuntos = new System.Windows.Forms.Label();
@@ -58,113 +58,113 @@
             this.lblExplicacion.TabIndex = 35;
             this.lblExplicacion.Text = "explicacion";
             // 
-            // btn12
+            // btnResp12
             // 
-            this.btn12.Location = new System.Drawing.Point(1049, 425);
-            this.btn12.Margin = new System.Windows.Forms.Padding(4);
-            this.btn12.Name = "btn12";
-            this.btn12.Size = new System.Drawing.Size(184, 100);
-            this.btn12.TabIndex = 34;
-            this.btn12.UseVisualStyleBackColor = true;
+            this.btnResp12.Location = new System.Drawing.Point(1049, 425);
+            this.btnResp12.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResp12.Name = "btnResp12";
+            this.btnResp12.Size = new System.Drawing.Size(184, 100);
+            this.btnResp12.TabIndex = 34;
+            this.btnResp12.UseVisualStyleBackColor = true;
             // 
-            // btn11
+            // btnResp11
             // 
-            this.btn11.Location = new System.Drawing.Point(813, 425);
-            this.btn11.Margin = new System.Windows.Forms.Padding(4);
-            this.btn11.Name = "btn11";
-            this.btn11.Size = new System.Drawing.Size(184, 100);
-            this.btn11.TabIndex = 33;
-            this.btn11.UseVisualStyleBackColor = true;
+            this.btnResp11.Location = new System.Drawing.Point(813, 425);
+            this.btnResp11.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResp11.Name = "btnResp11";
+            this.btnResp11.Size = new System.Drawing.Size(184, 100);
+            this.btnResp11.TabIndex = 33;
+            this.btnResp11.UseVisualStyleBackColor = true;
             // 
-            // btn10
+            // btnResp10
             // 
-            this.btn10.Location = new System.Drawing.Point(574, 425);
-            this.btn10.Margin = new System.Windows.Forms.Padding(4);
-            this.btn10.Name = "btn10";
-            this.btn10.Size = new System.Drawing.Size(184, 100);
-            this.btn10.TabIndex = 32;
-            this.btn10.UseVisualStyleBackColor = true;
+            this.btnResp10.Location = new System.Drawing.Point(574, 425);
+            this.btnResp10.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResp10.Name = "btnResp10";
+            this.btnResp10.Size = new System.Drawing.Size(184, 100);
+            this.btnResp10.TabIndex = 32;
+            this.btnResp10.UseVisualStyleBackColor = true;
             // 
-            // btn9
+            // btnResp9
             // 
-            this.btn9.Location = new System.Drawing.Point(349, 425);
-            this.btn9.Margin = new System.Windows.Forms.Padding(4);
-            this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(184, 100);
-            this.btn9.TabIndex = 31;
-            this.btn9.UseVisualStyleBackColor = true;
+            this.btnResp9.Location = new System.Drawing.Point(349, 425);
+            this.btnResp9.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResp9.Name = "btnResp9";
+            this.btnResp9.Size = new System.Drawing.Size(184, 100);
+            this.btnResp9.TabIndex = 31;
+            this.btnResp9.UseVisualStyleBackColor = true;
             // 
-            // btn8
+            // btnResp8
             // 
-            this.btn8.Location = new System.Drawing.Point(1049, 302);
-            this.btn8.Margin = new System.Windows.Forms.Padding(4);
-            this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(184, 100);
-            this.btn8.TabIndex = 30;
-            this.btn8.UseVisualStyleBackColor = true;
+            this.btnResp8.Location = new System.Drawing.Point(1049, 302);
+            this.btnResp8.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResp8.Name = "btnResp8";
+            this.btnResp8.Size = new System.Drawing.Size(184, 100);
+            this.btnResp8.TabIndex = 30;
+            this.btnResp8.UseVisualStyleBackColor = true;
             // 
-            // btn7
+            // btnResp7
             // 
-            this.btn7.Location = new System.Drawing.Point(813, 302);
-            this.btn7.Margin = new System.Windows.Forms.Padding(4);
-            this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(184, 100);
-            this.btn7.TabIndex = 29;
-            this.btn7.UseVisualStyleBackColor = true;
+            this.btnResp7.Location = new System.Drawing.Point(813, 302);
+            this.btnResp7.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResp7.Name = "btnResp7";
+            this.btnResp7.Size = new System.Drawing.Size(184, 100);
+            this.btnResp7.TabIndex = 29;
+            this.btnResp7.UseVisualStyleBackColor = true;
             // 
-            // btn6
+            // btnResp6
             // 
-            this.btn6.Location = new System.Drawing.Point(574, 302);
-            this.btn6.Margin = new System.Windows.Forms.Padding(4);
-            this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(184, 100);
-            this.btn6.TabIndex = 28;
-            this.btn6.UseVisualStyleBackColor = true;
+            this.btnResp6.Location = new System.Drawing.Point(574, 302);
+            this.btnResp6.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResp6.Name = "btnResp6";
+            this.btnResp6.Size = new System.Drawing.Size(184, 100);
+            this.btnResp6.TabIndex = 28;
+            this.btnResp6.UseVisualStyleBackColor = true;
             // 
-            // btn5
+            // btnResp5
             // 
-            this.btn5.Location = new System.Drawing.Point(349, 302);
-            this.btn5.Margin = new System.Windows.Forms.Padding(4);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(184, 100);
-            this.btn5.TabIndex = 27;
-            this.btn5.UseVisualStyleBackColor = true;
+            this.btnResp5.Location = new System.Drawing.Point(349, 302);
+            this.btnResp5.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResp5.Name = "btnResp5";
+            this.btnResp5.Size = new System.Drawing.Size(184, 100);
+            this.btnResp5.TabIndex = 27;
+            this.btnResp5.UseVisualStyleBackColor = true;
             // 
-            // btn4
+            // btnResp4
             // 
-            this.btn4.Location = new System.Drawing.Point(1049, 175);
-            this.btn4.Margin = new System.Windows.Forms.Padding(4);
-            this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(184, 100);
-            this.btn4.TabIndex = 26;
-            this.btn4.UseVisualStyleBackColor = true;
+            this.btnResp4.Location = new System.Drawing.Point(1049, 175);
+            this.btnResp4.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResp4.Name = "btnResp4";
+            this.btnResp4.Size = new System.Drawing.Size(184, 100);
+            this.btnResp4.TabIndex = 26;
+            this.btnResp4.UseVisualStyleBackColor = true;
             // 
-            // btn3
+            // btnResp3
             // 
-            this.btn3.Location = new System.Drawing.Point(813, 175);
-            this.btn3.Margin = new System.Windows.Forms.Padding(4);
-            this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(184, 100);
-            this.btn3.TabIndex = 25;
-            this.btn3.UseVisualStyleBackColor = true;
+            this.btnResp3.Location = new System.Drawing.Point(813, 175);
+            this.btnResp3.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResp3.Name = "btnResp3";
+            this.btnResp3.Size = new System.Drawing.Size(184, 100);
+            this.btnResp3.TabIndex = 25;
+            this.btnResp3.UseVisualStyleBackColor = true;
             // 
-            // btn2
+            // btnResp2
             // 
-            this.btn2.Location = new System.Drawing.Point(574, 175);
-            this.btn2.Margin = new System.Windows.Forms.Padding(4);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(184, 100);
-            this.btn2.TabIndex = 24;
-            this.btn2.UseVisualStyleBackColor = true;
+            this.btnResp2.Location = new System.Drawing.Point(574, 175);
+            this.btnResp2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResp2.Name = "btnResp2";
+            this.btnResp2.Size = new System.Drawing.Size(184, 100);
+            this.btnResp2.TabIndex = 24;
+            this.btnResp2.UseVisualStyleBackColor = true;
             // 
-            // btn1
+            // btnResp1
             // 
-            this.btn1.Location = new System.Drawing.Point(349, 175);
-            this.btn1.Margin = new System.Windows.Forms.Padding(4);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(184, 100);
-            this.btn1.TabIndex = 23;
-            this.btn1.UseVisualStyleBackColor = true;
+            this.btnResp1.Location = new System.Drawing.Point(349, 175);
+            this.btnResp1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResp1.Name = "btnResp1";
+            this.btnResp1.Size = new System.Drawing.Size(184, 100);
+            this.btnResp1.TabIndex = 23;
+            this.btnResp1.UseVisualStyleBackColor = true;
             // 
             // btnPasar
             // 
@@ -175,6 +175,7 @@
             this.btnPasar.TabIndex = 22;
             this.btnPasar.Text = "Pasar";
             this.btnPasar.UseVisualStyleBackColor = true;
+            this.btnPasar.Click += new System.EventHandler(this.btnPasar_Click);
             // 
             // lblPregunta
             // 
@@ -222,18 +223,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1535, 699);
             this.Controls.Add(this.lblExplicacion);
-            this.Controls.Add(this.btn12);
-            this.Controls.Add(this.btn11);
-            this.Controls.Add(this.btn10);
-            this.Controls.Add(this.btn9);
-            this.Controls.Add(this.btn8);
-            this.Controls.Add(this.btn7);
-            this.Controls.Add(this.btn6);
-            this.Controls.Add(this.btn5);
-            this.Controls.Add(this.btn4);
-            this.Controls.Add(this.btn3);
-            this.Controls.Add(this.btn2);
-            this.Controls.Add(this.btn1);
+            this.Controls.Add(this.btnResp12);
+            this.Controls.Add(this.btnResp11);
+            this.Controls.Add(this.btnResp10);
+            this.Controls.Add(this.btnResp9);
+            this.Controls.Add(this.btnResp8);
+            this.Controls.Add(this.btnResp7);
+            this.Controls.Add(this.btnResp6);
+            this.Controls.Add(this.btnResp5);
+            this.Controls.Add(this.btnResp4);
+            this.Controls.Add(this.btnResp3);
+            this.Controls.Add(this.btnResp2);
+            this.Controls.Add(this.btnResp1);
             this.Controls.Add(this.btnPasar);
             this.Controls.Add(this.lblPregunta);
             this.Controls.Add(this.lblPuntos);
@@ -250,18 +251,18 @@
         #endregion
 
         private System.Windows.Forms.Label lblExplicacion;
-        private System.Windows.Forms.Button btn12;
-        private System.Windows.Forms.Button btn11;
-        private System.Windows.Forms.Button btn10;
-        private System.Windows.Forms.Button btn9;
-        private System.Windows.Forms.Button btn8;
-        private System.Windows.Forms.Button btn7;
-        private System.Windows.Forms.Button btn6;
-        private System.Windows.Forms.Button btn5;
-        private System.Windows.Forms.Button btn4;
-        private System.Windows.Forms.Button btn3;
-        private System.Windows.Forms.Button btn2;
-        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button btnResp12;
+        private System.Windows.Forms.Button btnResp11;
+        private System.Windows.Forms.Button btnResp10;
+        private System.Windows.Forms.Button btnResp9;
+        private System.Windows.Forms.Button btnResp8;
+        private System.Windows.Forms.Button btnResp7;
+        private System.Windows.Forms.Button btnResp6;
+        private System.Windows.Forms.Button btnResp5;
+        private System.Windows.Forms.Button btnResp4;
+        private System.Windows.Forms.Button btnResp3;
+        private System.Windows.Forms.Button btnResp2;
+        private System.Windows.Forms.Button btnResp1;
         private System.Windows.Forms.Button btnPasar;
         private System.Windows.Forms.Label lblPregunta;
         private System.Windows.Forms.Label lblPuntos;

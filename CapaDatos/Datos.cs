@@ -25,6 +25,13 @@ namespace CapaDatos
             return pregunta.ToList()[0];
         }
 
+        public List<Pregunta> devolverPreguntas()
+        {
+            var preguntas = from preg in contexto.Preguntas
+                            select preg;
+            return preguntas.ToList();
+        } 
+
         public List<Respuesta> devolverRespuestas(int idPregunta)
         {
             var respuestas = from resp in contexto.Respuestas
