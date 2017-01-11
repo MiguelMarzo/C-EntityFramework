@@ -39,17 +39,16 @@ namespace CapaPresentacion
 
             respuestasActuales = _negocio.devolverRespuestas(preguntaActual.IDPREGUNTA);
             List<Respuesta> respuestasInsertadas = new List<Respuesta>();
+            int max = 12;
             foreach (Control X in this.Controls)
             {
                 if (X is Button & X.Text == "")
                 {
-                    foreach (Respuesta resp in respuestasActuales)
-                    {
-                        if (!(respuestasInsertadas.Contains(resp)))
-                        {
-                            X.Text = resp.DESCRIPCION;
-                        }
-                    }
+                    int num2 = rnd.Next(0, max);
+                            X.Text = respuestasActuales[num2].DESCRIPCION;
+                            respuestasActuales.Remove(respuestasActuales[num2]);
+                    max = max - 1;
+                    
                 }
 
             }
