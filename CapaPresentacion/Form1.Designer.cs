@@ -53,9 +53,8 @@
             this.lblExplicacion.AutoSize = true;
             this.lblExplicacion.Location = new System.Drawing.Point(194, 471);
             this.lblExplicacion.Name = "lblExplicacion";
-            this.lblExplicacion.Size = new System.Drawing.Size(60, 13);
+            this.lblExplicacion.Size = new System.Drawing.Size(0, 13);
             this.lblExplicacion.TabIndex = 35;
-            this.lblExplicacion.Text = "explicacion";
             // 
             // btnResp12
             // 
@@ -168,18 +167,16 @@
             this.lblPregunta.AutoSize = true;
             this.lblPregunta.Location = new System.Drawing.Point(404, 95);
             this.lblPregunta.Name = "lblPregunta";
-            this.lblPregunta.Size = new System.Drawing.Size(49, 13);
+            this.lblPregunta.Size = new System.Drawing.Size(0, 13);
             this.lblPregunta.TabIndex = 21;
-            this.lblPregunta.Text = "pregunta";
             // 
             // lblPuntos
             // 
             this.lblPuntos.AutoSize = true;
             this.lblPuntos.Location = new System.Drawing.Point(364, 95);
             this.lblPuntos.Name = "lblPuntos";
-            this.lblPuntos.Size = new System.Drawing.Size(19, 13);
+            this.lblPuntos.Size = new System.Drawing.Size(0, 13);
             this.lblPuntos.TabIndex = 20;
-            this.lblPuntos.Text = "20";
             // 
             // label1
             // 
@@ -223,7 +220,7 @@
             this.Controls.Add(this.lblPuntos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
