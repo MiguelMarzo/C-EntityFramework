@@ -166,6 +166,7 @@
             // lblPregunta
             // 
             this.lblPregunta.AutoSize = true;
+            this.lblPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPregunta.Location = new System.Drawing.Point(404, 95);
             this.lblPregunta.Name = "lblPregunta";
             this.lblPregunta.Size = new System.Drawing.Size(49, 13);
@@ -223,7 +224,7 @@
             this.Controls.Add(this.lblPuntos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
