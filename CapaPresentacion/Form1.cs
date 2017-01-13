@@ -20,7 +20,6 @@ namespace CapaPresentacion
         private List<Respuesta> respuestasActuales;
         private List<Respuesta> respuestasInsertadas = new List<Respuesta>();
         private Random rnd = new Random();
-        private List<int> usadas;
         private int puntos;
         private int contAcertadas;
         private int contErrores;
@@ -39,6 +38,7 @@ namespace CapaPresentacion
             puntos = 0;
             contErrores = 0;
             lblPuntos.Text = puntos.ToString();
+            lblPuntos.BackColor = Color.Gold;
             maxPregunta = 3;
             //Cargar 1
             int num = rnd.Next(0, maxPregunta);
@@ -46,6 +46,7 @@ namespace CapaPresentacion
 
             //Cargar la pregunta en lblPregunta y sus respuestas en los btns
             lblPregunta.Text = preguntaActual.DESCRIPCION;
+            lblPregunta.BackColor = Color.Gold;
 
             respuestasActuales = _negocio.devolverRespuestas(preguntaActual.IDPREGUNTA);
             max = 12;
@@ -115,6 +116,7 @@ namespace CapaPresentacion
 
         private void pasarPregunta()
         {
+            contAcertadas = 0;
             preguntas.Remove(preguntaActual);
             maxPregunta--;
             if(preguntas.Count == 0)
@@ -133,6 +135,7 @@ namespace CapaPresentacion
                 }
             }
             lblPregunta.Text = preguntaActual.DESCRIPCION;
+            lblPregunta.BackColor = Color.Gold;
             respuestasActuales = _negocio.devolverRespuestas(preguntaActual.IDPREGUNTA);
             max = 12;
             foreach (Control X in this.Controls)
@@ -149,6 +152,9 @@ namespace CapaPresentacion
             }
         }
 
-
+        private void btnFin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
